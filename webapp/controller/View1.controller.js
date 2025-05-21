@@ -108,8 +108,64 @@ sap.ui.define([
                 at: "center center"
             });
 
-        }
+        },
+        onExercise5: function () {
+            const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+            const suffixes = ["th", "st", "nd", "rd"];
 
+            let result = "";
+
+            for (let i = 0; i < colors.length; i++) {
+                let pos = i + 1;
+                let suffix = (pos % 100 >= 11 && pos % 100 <= 13) ? "th" :
+                    (pos % 10 === 1) ? "st" :
+                        (pos % 10 === 2) ? "nd" :
+                            (pos % 10 === 3) ? "rd" : "th";
+
+                result += `${pos}${suffix} choice is ${colors[i]}.\n`;
+            }
+
+            sap.m.MessageToast.show(result, {
+                my: "center center",
+                at: "center center"
+            });
+        },
+        onExercise6: function () {
+            const record = [
+                {
+                    Name: "Gibo",
+                    Age: 16,
+                    SkillSet: [{ Skill: "SAP UI5" }, { Skill: "SAP HANA" }]
+                },
+                {
+                    Name: "Patrick",
+                    Age: 22,
+                    SkillSet: [{ Skill: "SAP UI5" }, { Skill: "SAP HANA" }, { Skill: "SAP ABAP" }]
+                },
+                {
+                    Name: "MJ",
+                    Age: 24,
+                    SkillSet: [{ Skill: "SAP HANA" }]
+                }
+            ];
+        
+            let maxSkills = 0;
+            let topPerson = null;
+        
+            for (let person of record) {
+                if (person.SkillSet.length > maxSkills) {
+                    maxSkills = person.SkillSet.length;
+                    topPerson = person;
+                }
+            }
+        
+            if (topPerson) {
+                MessageToast.show(`Name: ${topPerson.Name}\nAge: ${topPerson.Age}`, {
+                    my: "center center",
+                    at: "center center"
+                });
+            }
+        }
 
     });
 });

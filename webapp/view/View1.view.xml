@@ -17,6 +17,14 @@
     type="Default"
     text="Exercise 4"
     press=".onExercise4" /> 
+<Button
+    type="Default"
+    text="Exercise 5"
+    press=".onExercise5" /> 
+<Button
+    type="Default"
+    text="Exercise 6"
+    press=".onExercise6" /> 
 </VBox>        
     </Page>
 </mvc:View>
