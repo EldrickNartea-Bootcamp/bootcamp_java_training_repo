@@ -1,6 +1,22 @@
-<mvc:View controllerName="bootcampjavatrainingrepo.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="bootcampjavatrainingrepo.controller.View1">
     <Page id="page" title="{i18n>title}">
+<VBox >
+<Button
+    type="Default"
+    text="Exercise 1"
+    press=".onExercise1" /> 
+<Button
+    type="Default"
+    text="Exercise 2"
+    press=".onExercise2" /> 
+<Button
+    type="Default"
+    text="Exercise 3"
+    press=".onExercise3" /> 
+<Button
+    type="Default"
+    text="Exercise 4"
+    press=".onExercise4" /> 
+</VBox>        
     </Page>
 </mvc:View>
